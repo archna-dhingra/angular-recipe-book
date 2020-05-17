@@ -1,6 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Subscription } from 'rxjs';
 
 import { HOME_PAGE_TAGLINE, HOME_PAGE_BACKGROUND } from '../app.constants';
 import { Recipe } from '../recipes/recipe.model';
@@ -12,11 +11,10 @@ import { RecipeService } from '../recipes/recipe.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit {
   HOME_PAGE_TAGLINE = HOME_PAGE_TAGLINE;
   HOME_PAGE_BACKGROUND = HOME_PAGE_BACKGROUND;
   recipes: Recipe[] = [];
-  dialogSubscription: Subscription;
   fromPage: string = "home";
 
   constructor(private recipeService: RecipeService,
@@ -38,9 +36,5 @@ export class HomeComponent implements OnInit, OnDestroy {
       disableClose: true,
       data: recipe
     });
-  }
-
-  ngOnDestroy() {
-    this.dialogSubscription.unsubscribe();
   }
 }
