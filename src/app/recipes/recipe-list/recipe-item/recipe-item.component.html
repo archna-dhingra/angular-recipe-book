@@ -1,0 +1,26 @@
+<!-- <div class="row mar-left-0">
+  <a class="list-group-item clearfix" [routerLink]="[recipeIndex]" routerLinkActive="active">
+    <div class="col-xs-9">
+      <div class="pull-left">
+        <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+        <p class="list-group-item-text">{{ recipe.description }}</p>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <span class="pull-left">
+        <img [src]="recipe.imageUrl" alt="{{ recipe.name }}" class="img-responsive" style="max-width: 80px;">
+      </span>
+    </div>
+  </a>
+</div> -->
+
+
+  <mat-card class="recipe-card" fxFlex="0 1 auto" (click)="showRecipeDetails()">
+      <!-- <img mat-card-image src="https://static2.tripoto.com/media/filter/nl/img/461838/TripDocument/1517477853_vegetables_italian_pizza_restaurant.jpg" [alt]="recipe.name"> -->
+      <img mat-card-image [src]="recipe.imageUrl" [alt]="recipe.name">
+      <!-- 750 x 600 pixels image mandatory -->
+      <mat-card-header>
+          <mat-card-title>{{recipe.name}}</mat-card-title>
+          <mat-card-subtitle>{{recipe.description}}</mat-card-subtitle>
+      </mat-card-header>
+  </mat-card>

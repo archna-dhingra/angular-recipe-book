@@ -1,0 +1,25 @@
+<div class="row" *ngIf="!recipeDetailsFlag">
+    <div class="col-xs-2">
+      Filters
+    </div>
+    <div class="col-xs-10">
+      <h1 class="recipes-heading">Recipes
+        <!-- <span> -->
+          <button type="button" class="btn btn-primary add-recipe-btn" (click)="openAddNewRecipeDialog()">Add new recipe</button>
+        <!-- </span> -->
+      </h1>
+      <!-- <recipe-list [recipes]="recipes" [fromPage]="fromPage" (recipePreview)="openRecipePreview($event)"></recipe-list> -->
+      <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="flex-start center" class="mar-top-40">
+        <ng-container *ngFor="let recipe of recipes; let i = index">
+            <div class="col-xs-3 mar-bottom-30">
+              <recipe-item [recipe]="recipe" [fromPage]="fromPage" (recipeDetails)="showRecipeDetails(recipe.key)"></recipe-item>
+            </div>
+        </ng-container>
+      </div>
+    </div>
+</div>
+<div class="row" *ngIf="recipeDetailsFlag">
+  <div class="col-xs-12">
+    <router-outlet></router-outlet>
+  </div>  
+</div>

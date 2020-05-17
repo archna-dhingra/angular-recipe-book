@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.btn {
+    margin-right: 5px; 
+}
+
+.close-icon {
+    float: right;
+    min-width: 38px;
+    padding: 0px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.mar-top-30 {
+    margin-top: 30px;
+}
+
+.mar-top-16 {
+    margin-top: 16px;
+}
+
+.add-recipe-dialog-container .mat-dialog-container {
+    width: 500px;
+}

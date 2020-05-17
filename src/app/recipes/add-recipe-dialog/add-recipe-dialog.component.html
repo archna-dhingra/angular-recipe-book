@@ -1,0 +1,68 @@
+<button mat-button mat-dialog-close class="close-icon">
+    <mat-icon>close</mat-icon>
+</button>
+<h1 mat-dialog-title>Add Recipe</h1>
+<form (ngSubmit)="addRecipe()">
+    <mat-dialog-content>
+        <div class="mar-top-16 recipe-form">
+            <div>
+                <mat-form-field class="full-width" floatLabel="always">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Ex. Pizza" value="">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="full-width" floatLabel="always">
+                    <mat-label>URL</mat-label>
+                    <input matInput placeholder="Image URL or Video URL" value="">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="full-width" floatLabel="always">
+                    <mat-label>Total Time</mat-label>
+                    <input matInput placeholder="30 minutes" value="">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="full-width" floatLabel="always">
+                    <mat-label>Preparation Time</mat-label>
+                    <input matInput placeholder="10 minutes" value="">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="full-width" floatLabel="always">
+                    <mat-label>Cooking Time</mat-label>
+                    <input matInput placeholder="20 minutes" value="">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="full-width" floatLabel="always">
+                    <mat-label>Serves</mat-label>
+                    <input matInput placeholder="4 people" value="">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="full-width" floatLabel="always">
+                    <mat-label>Description</mat-label>
+                    <input matInput placeholder="Add a short description for your recipe" value="">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="full-width" floatLabel="always">
+                    <mat-label>Ingredient</mat-label>
+                    <input matInput placeholder="Add ingredient" value="">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="full-width" floatLabel="always">
+                    <mat-label>Directions</mat-label>
+                    <textarea matInput placeholder="Add directions for your recipe"></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button type="submit" mat-button class="btn btn-primary">Save</button>
+        <button mat-button mat-dialog-close class="btn btn-primary">Cancel</button>
+    </mat-dialog-actions>
+</form>

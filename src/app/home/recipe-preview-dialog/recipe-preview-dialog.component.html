@@ -1,0 +1,32 @@
+<button mat-button mat-dialog-close class="close-icon">
+    <mat-icon>close</mat-icon>
+</button>
+<h1 mat-dialog-title>{{recipe.name}}</h1>
+<mat-divider></mat-divider>
+<mat-dialog-content>
+    <div class="mar-top-16">
+        <span class="time">
+            <strong>Total Time: </strong>
+            <span>20 minutes</span>
+        </span>
+        <span class="time">
+            <strong>Preparation Time: </strong>
+            <span>10 minutes</span>
+        </span>
+        <span>
+            <strong>Cooking Time: </strong>
+            <span>10 minutes</span>
+        </span>
+    </div>
+    <div class="mar-top-16">
+        <strong>Ingredients</strong>
+        <ul>
+            <li *ngFor="let ingredient of recipe.ingredients">
+                {{ ingredient.name }}
+            </li>
+        </ul>
+    </div>
+    <div class="mar-top-16">
+        <a mat-dialog-close (click)="openRecipeDetailsPage()">See more...</a>
+    </div>
+</mat-dialog-content>

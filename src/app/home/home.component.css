@@ -1,0 +1,17 @@
+.home-background {
+    padding: 0px;
+    position: relative;
+    text-align: center;
+}
+
+.home-background img {
+    height: 250px;
+    width: 100%;
+}
+
+.tagline {
+    left: 50%;
+    position: absolute;
+    top: 80%;
+    transform: translate(-50%, -50%);
+}

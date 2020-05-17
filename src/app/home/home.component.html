@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-xs-12 home-background">
+        <img [src]="HOME_PAGE_BACKGROUND" alt="" class="img-responsive">
+        <h1 class="tagline">{{HOME_PAGE_TAGLINE}}</h1>
+    </div>
+</div>
+<div class="row mar-top-30">
+    <div class="col-xs-12">
+        <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="flex-start center">
+            <ng-container *ngFor="let recipe of recipes; let i = index">
+                <div class="col-xs-2 mar-bottom-30" *ngIf="i === 0">
+                    <h1>{{recipe.name}}</h1>
+                </div>
+                <div class="col-xs-2 mar-bottom-30" *ngIf="i > 0">
+                  <recipe-item [recipe]="recipe" [fromPage]="fromPage" (recipeDetails)="openRecipePreview(recipe)"></recipe-item>
+                </div>
+            </ng-container>
+          </div>
+    </div>
+</div>
